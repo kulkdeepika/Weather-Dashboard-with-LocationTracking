@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
+      rel="stylesheet">
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <h1>Weather Dashboard</h1>
+    <div class="container">
+    <div id= "mainRow" class="row">
+        <div class="col-12 col-sm-3" id="searchBlock">
+            <form class="form-inline active-cyan-4">
+                <input class="form-control form-control-sm mr-3 w-75" type="text" placeholder="Search for a City"
+                aria-label="Search">
+                <button class="btn btn-primary btn-sm my-2 my-sm-0" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+            </form>
+            <br>
+            <ul class="list-group">
+                <li id="listLocation4" class="list-group-item">Seattle</li>
+                <li id="listLocation3" class="list-group-item">New York</li>
+                <li id="listLocation2" class="list-group-item">California</li>
+                <li id="listLocation1" class="list-group-item">Austin</li>
+                <li id="listLocation0" class="list-group-item">San Jose</li>
+            </ul>
+        </div>
+    
+
+    <div class="col-9" id="forecast">
+        <div class="row" id="currentWeather">
+            <div class="col">
+                <h3><span id ="cityName"></span><span id="icon"><img id="wicon" src="" alt="Weather icon"></span></h3>
+                <p>Temperature: <span id="currTemp"></span> &#8457</p>
+                <p>Humidity: <span id="currHumidity"></span>%</p>
+                <p>Wind Speed: <span id="currWindSpeed"></span></p>
+                <p> UV Index: <span id="currUVindex"></span></p>   
+            </div>
+        </div>
+        <div class="row" id="forecastCards">
+            <div class="col">
+                <h3 style="color:white;">5 Day Forecast:</h3>
+                <div class="card-deck">
+                        <div class="card bg-primary">
+                            <div class="card-body text-left">
+                                <p id="dateDay1" class="card-text">01/14/2020</p>
+                                <img id="wiconDay1" src="" alt="Weather icon">
+                                <p class="card-text">Temp: <span id="tempDay1"></span> &#8457</p>
+                                <p class="card-text">Humidity: <span id="humDay1"></span>%</p>
+                            </div>
+                        </div>
+
+                        <div class="card bg-primary">
+                            <div class="card-body text-left">
+                                <p id="dateDay2" class="card-text">01/14/2020</p>
+                                <img id="wiconDay2" src="" alt="Weather icon">
+                                <p class="card-text">Temp: <span id="tempDay2"></span> &#8457</p>
+                                <p class="card-text">Humidity: <span id="humDay2"></span>%</p>
+                            </div>
+                        </div>
+
+                        <div class="card bg-primary">
+                            <div class="card-body text-left">
+                                <p id="dateDay3" class="card-text">01/14/2020</p>
+                                <img id="wiconDay3" src="" alt="Weather icon">
+                                <p class="card-text">Temp: <span id="tempDay3"></span> &#8457</p>
+                                <p class="card-text">Humidity: <span id="humDay3"></span>%</p>
+                            </div>
+                        </div>
+
+                        <div class="card bg-primary">
+                            <div class="card-body text-left">
+                                <p id="dateDay4" class="card-text">01/14/2020</p>
+                                <img id="wiconDay4" src="" alt="Weather icon">
+                                <p class="card-text">Temp: <span id="tempDay4"></span> &#8457</p>
+                                <p class="card-text">Humidity: <span id="humDay4"></span>% </p>
+                            </div>
+                        </div>
+
+                        <div class="card bg-primary">
+                            <div class="card-body text-left">
+                                <p id="dateDay5" class="card-text">01/14/2020</p>
+                                <img id="wiconDay5" src="" alt="Weather icon">
+                                <p class="card-text">Temp: <span id="tempDay5"></span> &#8457</p>
+                                <p class="card-text">Humidity: <span id="humDay5"></span>%</p>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+
+<div id="myModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <p id="errorMsg">There was an error. Please check the city name or try again later.</p>
+      </div>
+</div>
+
+<script src="script.js"></script>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+
+</body>
+</html>
+

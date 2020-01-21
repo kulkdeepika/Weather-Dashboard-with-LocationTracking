@@ -1,0 +1,77 @@
+body{
+    background-image: url("clouds.gif");
+}
+h1{
+    background-color: black;
+    color: azure;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    height:20%;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+form{
+    padding-top: 10px;
+}
+
+.form-inline,.list-group{
+    width: 80%;
+}
+
+.btn{
+    
+    border-radius: 10px;
+}
+#currentWeather{
+    border-style: solid;
+    border-color: gray;
+    border-width: thin;
+    background-color: white;
+}
+
+#currUVindex{
+    background-color: orangered;
+    border-radius: 5px;
+    width:50px;
+    color: white;
+    font-size: small;
+}
+
+#searchBlock{
+    background-color: gainsboro;
+}
+.card-body{
+    padding: 5px;
+}
+.list-group-item{
+    cursor: pointer;
+}
+
+.modal {
+    display: none; /* hidden by default */
+    position: fixed; /* stay in place */
+    z-index: 1; /* sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; /* enable scroll if needed */
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+  }
+
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* could be more or less, depending on screen size */
+  }
+
+.close {
+    color: blue;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
