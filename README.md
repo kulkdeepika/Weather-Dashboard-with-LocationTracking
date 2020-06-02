@@ -1,7 +1,5 @@
 # Weather-Dashboard-with-LocationTracking
 
-@ https://kulkdeepika.github.io/Weather-Dashboard-with-LocationTracking
-
 Get weather data at your current location and other cities 
 
 ## Usage
@@ -11,6 +9,11 @@ On the initial use, the user is shown quick access options for some of the major
 
 ## Limitations
 For the 5-day forecast, ideally, a daily 24-hour forecast data is required for accuracy. Openweatherapi's free subscription only provides access to 5-day 3-hour forecast to get a forecast. The forecast starts 3-6 hours from the time the app is accessed. For this reason, data was sampled randomly for each day, which is not most accurate. 
+
+# Deployed Link
+[Weather Dashboard](https://kulkdeepika.github.io/Weather-Dashboard-with-LocationTracking)
+
+![App ScreenShot](./ScreenShot.png)
 
 ## Credits
 Openweatherapi was used to get the weather data. Moment.js was used for conversion of time format. w3schools.com and stackoverflow.com were used try to resolve some obstables encountered.
